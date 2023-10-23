@@ -60,6 +60,7 @@ public class App {
                 OutputStream outputStream = clientSocket.getOutputStream();
                 String response = String.valueOf(distance);
                 outputStream.write(response.getBytes());
+                scanner.close();
             }
         } catch (IOException e) {
             System.err.println("Error while handling client: " + e.getMessage());
